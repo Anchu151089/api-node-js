@@ -31,6 +31,7 @@ test.describe('User management API for existing users', () => {
 
     test('create user: should add a new user', async ({ request }) => {
 
+
         const response = await request.post(`${baseURL}`);
         expect(response.status()).toBe(201);
         const responseBody = await response.json()
@@ -40,6 +41,7 @@ test.describe('User management API for existing users', () => {
     test('delete user: should delete a user by ID', async ({ request }) => {
 
         //creating new user
+
         const responseUserCreation = await request.post(`${baseURL}` );
         expect(responseUserCreation.status()).toBe(201);
         const responseBodyUserCreation = await responseUserCreation.json()
