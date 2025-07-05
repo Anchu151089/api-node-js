@@ -1,6 +1,5 @@
 // tests/api.spec.ts
 import { test, expect } from '@playwright/test';
-import {response} from "express";
 let baseURL: string = 'http://localhost:3000/users';
 test.describe('User management API for empty users', () => {
 
