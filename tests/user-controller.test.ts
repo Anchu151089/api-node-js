@@ -1,6 +1,5 @@
 // tests/api.spec.ts
 import { test, expect } from '@playwright/test';
-import {response} from "express";
 let baseURL: string = 'http://localhost:3000/users';
 test.describe('User management API for empty users', () => {
 
@@ -30,6 +29,7 @@ test.describe('User management API for existing users', () => {
     });
 
     test('create user: should add a new user', async ({ request }) => {
+
 
         const response = await request.post(`${baseURL}`);
         expect(response.status()).toBe(201);
